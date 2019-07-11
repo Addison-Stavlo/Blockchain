@@ -55,7 +55,7 @@ if __name__ == '__main__':
         # add 1 to the number of coins mined and print it.  Otherwise,
         # print the message from the server.
         if proof_response.get('message') == 'New Block Forged':
-            print("I mined a coin!  Count: " + str(coins_mined))
             coins_mined += 1
+            print(f'I mined a coin!  Count {coins_mined}')
         else:
             print(proof_response.get('message'))
